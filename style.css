@@ -35,7 +35,7 @@ hr {
 }
 
 /* Organização dos cartões */
-#secaoAuth, #secaoPainel {
+#secaoautenticacao, #secaoPainel {{
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
