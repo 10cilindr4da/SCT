@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <h1>Sistema de Controle de Tarefas</h1>
+
+    <!-- CADASTRO E AUTENTICAÇÃO -->
+    <div id="secaoautenticacao">
+
+        <!-- formulário de Login -->
+        <div id="boxLogin">
+            <h2>Autenticar Usuário (Login)</h2>
+            E-mail: <br><input type="text" id="loginEmail"><br><br>
+            Senha: <br><input type="password" id="loginSenha"><br><br>
+            <button onclick="autenticar()">Entrar</button>
+
+            <p class="texto-alternar">Ainda não tem conta? <a href="#" onclick="alternarTela('cadastro')">Cadastre-se aqui</a></p>
+        </div>
+
+        <!-- Cadastro de usuario -->
+        <div id="boxCadastro" style="display: none;">
+            <h2>Cadastrar Usuário</h2>
+            Nome Completo: <br><input type="text" id="cadNome"><br><br>
+            E-mail: <br><input type="text" id="cadEmail"><br><br>
+            Senha: <br><input type="password" id="cadSenha"><br><br>
+            <button onclick="cadastrarUsuario()">Cadastrar</button>
+
+            <p class="texto-alternar">Já possui uma conta? <a href="#" onclick="alternarTela('login')">Voltar para o Login</a></p>
+        </div>
+
+    </div>
+
+    <!--painel de tarefas -->
+   
+    <div id="secaoPainel" style="display: none;">
+        
+        <p id="boasVindas"></p>
+        <button onclick="encerrarSessao()" class="btn-perigo">Encerrar Sessão</button>
+
+        <br><br><hr><br>
+
+        <h2 id="tituloForm">Cadastrar Nova Tarefa</h2>
+        <!-- campo oculto para guardar o ID e editar no lugar -->
+        <input type="hidden" id="tarefaId">
+
+        Título (Obrigatório): <br><input type="text" id="tarefaTitulo"><br><br>
+        Descrição: <br><input type="text" id="tarefaDescricao"><br><br>
+        Prazo de Conclusão: <br><input type="text" id="tarefaPrazo" placeholder="Ex: 30/10/2026"><br><br>
+        
+        Status: <br> <!---Status das tarefas do usuário-->
+        <select id="tarefaStatus">
+            <option value="PENDENTE">PENDENTE</option>
+            <option value="EM_ANDAMENTO">EM_ANDAMENTO</option>
+            <option value="CONCLUIDA">CONCLUIDA</option>
+        </select><br><br>
+
+        <button onclick="salvarTarefa()">Salvar Tarefa</button>
+
+        <br><br><hr><br>
+
+        <h2>Minhas Tarefas</h2>
+        
+        Filtrar por Status: 
+        <select id="filtroStatus" onchange="listarTarefas()">
+            <option value="TODAS">Todas</option>
+            <option value="PENDENTE">PENDENTE</option>
+            <option value="EM_ANDAMENTO">EM_ANDAMENTO</option>
+            <option value="CONCLUIDA">CONCLUIDA</option>
+        </select>
+        <br><br>
+
+        <div id="tabelaTarefas"></div>
+    </div>
+</body>
+</html>

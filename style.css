@@ -1,0 +1,131 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8fafc; 
+    color: #1e293b;
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    padding: 30px;
+    max-width: 850px; 
+    margin: 0 auto;
+}
+
+/* Títulos principais */
+h1 {
+    color: #0284c7;
+    border-bottom: 3px solid #0284c7;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+h2 {
+    color: #0369a1;
+    margin-bottom: 15px;
+}
+
+/* Linha divisória estilizada */
+hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 25px 0;
+}
+
+/* Organização dos cartões */
+#secaoAuth, #secaoPainel {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* Campos de entrada de texto e seletores */
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    max-width: 400px;
+    padding: 9px 12px;
+    margin-top: 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Botões principais do sistema */
+button {
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+
+button:hover {
+    background-color: #0369a1;
+}
+
+
+.btn-perigo {
+    background-color: #e11d48;
+}
+
+.btn-perigo:hover {
+    background-color: #be123c;
+}
+
+
+.texto-alternar {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.texto-alternar a {
+    color: #0284c7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.texto-alternar a:hover {
+    text-decoration: underline;
+}
+
+/* Tabela de tarefas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 10px 12px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+
+tr:hover {
+    background-color: #f1f5f9;
+}
